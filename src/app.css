@@ -1,36 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
 .home-container {
   display: flex;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.main-container {
-  border: 2px solid black;
-  flex: 2.25;
   height: 100vh;
-  overflow-y: auto;
+}
+
+.section-container {
+  flex: 1;
 }
 
 .tasks-container {
   flex: 1;
+  border: 2px solid black;
 }
 
 .calendar-and-notes-container {
+  flex: 2.25;
   display: flex;
   flex-direction: column;
 }
 
-.calendar-container,
-.notes-container {
-  border: 2px solid red;
-  flex: 2;
+.calendar-container {
+  flex: 2.25;
 }
 
 .notes-container {
   flex: 1;
+  border: 2px solid black;
 }
