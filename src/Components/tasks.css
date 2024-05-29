@@ -1,0 +1,14 @@
+.tasks-parent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tasks-component {
+  border: 2px solid red;
+  flex: 18;
+}
+
+.tasks-archive {
+  flex: 1;
+}
