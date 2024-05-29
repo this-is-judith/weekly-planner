@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+# Simple Rhythm: Weekly Planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple Rhythm is a task organizer and weekly planner. It is currently under development and being built with React.
 
-## Available Scripts
+## Features to Include
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **To-Do List:** Create and manage tasks to keep track of daily activities.
+- **Task Categories:** Organize tasks into categories for better organization.
+- **Subtasks:** Break down larger tasks into smaller, manageable subtasks to track progress effectively.
+- **Priority Levels:** Assign priority levels (high, medium, low) to tasks to focus on what matters most.
+- **Due Dates:** Set due dates for tasks to stay on schedule and never miss a deadline.
+- **Reminders:** Receive timely reminders for upcoming tasks to ensure nothing falls through the cracks.
+- **Progress Bar:** Visualize task completion progress with a progress bar to stay motivated and on track.
+- **Additional Notes/Details:** Add supplementary notes and details to tasks for better context and reference.
+- **Recurring Tasks:** Schedule recurring tasks to automate repetitive processes and save time.
+- **Completed Tasks Archive:** Keep a record of completed tasks for future reference and analysis.
+- **Weekly Calendar:** View tasks and events in a weekly calendar layout for better planning and organization.
+- **Drag-and-Drop Interface:** Easily rearrange events by dragging and dropping them within the interface.
