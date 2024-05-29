@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./tasks.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { HiMiniPlusCircle } from "react-icons/hi2";
 
 function Tasks() {
   const [tasks, setTasks] = useState([]);
@@ -37,21 +38,30 @@ function Tasks() {
           </div>
 
           <div className="tasks-header-icon">
-            <BsThreeDotsVertical size="30" />
+            <BsThreeDotsVertical size="25" />
           </div>
         </div>
 
-        <div className="tasks-component add-a-task">
-          <input
+        <div className="tasks-component add-a-task-container">
+          <div className="add-a-task-icon">
+            <HiMiniPlusCircle size="23" />
+          </div>
+
+          <div className="add-a-task-text">
+            <h3>Add a Task</h3>
+          </div>
+
+          {/* <input
             type="text"
             name="title"
             value={newTask.title}
             onChange={handleInputChange}
             placeholder="Add a task"
             className="task-input"
-            onClick={toggleAddTask}
-          />
-          {isAddingTask && (
+            // onClick={toggleAddTask}
+          /> */}
+
+          {/* {isAddingTask && (
             <div className="task-details">
               <input
                 type="text"
@@ -72,7 +82,7 @@ function Tasks() {
                 Add a Task
               </button>
             </div>
-          )}
+          )} */}
         </div>
 
         <div className="tasks-component tasks-main">
