@@ -6,6 +6,7 @@ function Tasks() {
     <>
       <div className="tasks-parent">
         <div className="tasks-component tasks-header"></div>
+        <div className="tasks-component add-a-task"></div>
         <div className="tasks-component tasks-main"></div>
         <div className="tasks-component tasks-archive"></div>
       </div>

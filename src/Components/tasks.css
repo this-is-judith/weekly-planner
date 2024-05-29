@@ -13,6 +13,10 @@
   flex: 1.25;
 }
 
+.add-a-task {
+  flex: 1;
+}
+
 .tasks-archive {
   flex: 1;
 }
