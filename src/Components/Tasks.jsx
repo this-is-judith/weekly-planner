@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./tasks.css";
-// import { BsThreeDotsVertical } from "react-icons/bs";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 function Tasks() {
   const [tasks, setTasks] = useState([]);
@@ -32,9 +32,12 @@ function Tasks() {
     <>
       <div className="tasks-parent">
         <div className="tasks-component tasks-header">
-          <div className="tasks-header-title"></div>
+          <div className="tasks-header-title">
+            <h1>Judith's Tasks</h1>
+          </div>
+
           <div className="tasks-header-icon">
-            {/* <BsThreeDotsVertical /> */}
+            <BsThreeDotsVertical size="30" />
           </div>
         </div>
 

@@ -17,11 +17,22 @@
 .tasks-header-title {
   flex: 8;
   border: 2px solid green;
+  padding: 0 0 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.tasks-header-title h1 {
+  font-size: 25px;
+  margin: 0;
 }
 
 .tasks-header-icon {
   flex: 1;
   border: 2px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .add-a-task {
