@@ -1,0 +1,17 @@
+.home-container {
+  display: flex;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.main-container {
+  border: 2px solid black;
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+}
