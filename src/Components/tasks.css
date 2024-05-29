@@ -6,7 +6,11 @@
 
 .tasks-component {
   border: 2px solid red;
-  flex: 18;
+  flex: 15;
+}
+
+.tasks-header {
+  flex: 1.25;
 }
 
 .tasks-archive {
