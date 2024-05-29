@@ -11,7 +11,7 @@ function App() {
           <Tasks />
         </div>
 
-        <div className="main-container">
+        <div className="main-container calendar-and-notes-container">
           <div className="calendar-container">
             <Calendar />
           </div>
