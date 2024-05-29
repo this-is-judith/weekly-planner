@@ -36,9 +36,12 @@
   width: 100%;
   flex: 1;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
   border: 2px solid black;
+  cursor: pointer;
+}
+
+.add-a-task-container:hover {
+  background-color: grey;
 }
 
 .add-a-task-icon {
@@ -64,22 +67,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.task-list {
-  list-style-type: none;
-  padding: 0;
-  width: 100%;
+  border: 2px solid black;
 }
 
 .task-item {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 5px;
-  text-align: left;
+  border: 2px solid green;
 }
 
 .tasks-archive {
   flex: 1;
+  border: 2px solid black;
 }
