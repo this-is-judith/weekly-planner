@@ -11,6 +11,17 @@
 
 .tasks-header {
   flex: 1.25;
+  display: flex;
+}
+
+.tasks-header-title {
+  flex: 8;
+  border: 2px solid green;
+}
+
+.tasks-header-icon {
+  flex: 1;
+  border: 2px solid green;
 }
 
 .add-a-task {
@@ -33,19 +44,6 @@
   margin-right: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
-
-.add-task-button {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.add-task-button:hover {
-  background-color: #218838;
 }
 
 .tasks-main {

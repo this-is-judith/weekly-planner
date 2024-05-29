@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./tasks.css";
+// import { BsThreeDotsVertical } from "react-icons/bs";
 
 function Tasks() {
   const [tasks, setTasks] = useState([]);
@@ -30,7 +31,12 @@ function Tasks() {
   return (
     <>
       <div className="tasks-parent">
-        <div className="tasks-component tasks-header"></div>
+        <div className="tasks-component tasks-header">
+          <div className="tasks-header-title"></div>
+          <div className="tasks-header-icon">
+            {/* <BsThreeDotsVertical /> */}
+          </div>
+        </div>
 
         <div className="tasks-component add-a-task">
           <input
