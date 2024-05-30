@@ -172,13 +172,26 @@
 }
 
 .available-task-item {
-  /* border: 2px solid green; */
+  border: 2px solid yellow;
   height: 30px;
   width: 100%;
   display: flex;
   align-items: center;
   padding: 0 0 0 12px;
 }
+
+.available-task-hover-icon {
+  border: 2px solid green;
+}
+
+/* .available-task-hover-icon {
+  display: none;
+  flex: 0 0 auto;
+}
+
+.available-task-item-container:hover .available-task-hover-icon {
+  flex: 1;
+} */
 
 .tasks-archive {
   flex: 1;

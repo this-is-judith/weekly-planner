@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./tasks.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { HiMiniPlusCircle } from "react-icons/hi2";
-import { FaRegCircle } from "react-icons/fa";
+import { FaRegCircle, FaRegStar } from "react-icons/fa";
 import { CgDetailsMore } from "react-icons/cg";
 import { MdDateRange } from "react-icons/md";
 import { FaRepeat } from "react-icons/fa6";
@@ -184,9 +184,13 @@ function Tasks() {
                       {task}
                     </li>
 
-                    <div className="available-task-hover-icon"></div>
+                    <div className="available-task-hover-icon">
+                      <BsThreeDotsVertical />
+                    </div>
 
-                    <div className="available-task-hover-icon"></div>
+                    <div className="available-task-hover-icon">
+                      <FaRegStar />
+                    </div>
                   </div>
                 ))}
               </ul>
