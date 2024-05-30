@@ -175,9 +175,19 @@ function Tasks() {
             <div className="available-task-container">
               <ul className="available-task-list">
                 {taskTitles.map((task, index) => (
-                  <li key={index} className="available-task-item">
-                    {task}
-                  </li>
+                  <div className="available-task-item-container">
+                    <div className="available-task-circle">
+                      <FaRegCircle />
+                    </div>
+
+                    <li key={index} className="available-task-item">
+                      {task}
+                    </li>
+
+                    <div className="available-task-hover-icon"></div>
+
+                    <div className="available-task-hover-icon"></div>
+                  </div>
                 ))}
               </ul>
             </div>
