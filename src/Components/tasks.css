@@ -63,6 +63,7 @@
   flex-direction: column;
   align-items: center;
   border: 2px solid black;
+  overflow-y: auto;
 }
 
 .task-item-container {
@@ -160,7 +161,11 @@
 .available-task-item-container {
   display: flex;
   /* border: 2px solid yellow; */
-  padding: 3px 0 0 0;
+  padding: 3px 0 3px 0;
+}
+
+.available-task-item-container:hover {
+  background-color: lightgray;
 }
 
 .available-task-circle {
@@ -172,7 +177,7 @@
 }
 
 .available-task-item {
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   height: 30px;
   width: 100%;
   display: flex;
@@ -181,7 +186,16 @@
 }
 
 .available-task-hover-icon {
-  border: 2px solid green;
+  display: none; /* Initially hide the details portion */
+  flex: 0 0 auto;
+}
+
+.available-task-item-container:hover .available-task-hover-icon {
+  /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px 0 5px;
 }
 
 /* .available-task-hover-icon {
