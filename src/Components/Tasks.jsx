@@ -2,47 +2,59 @@ import React, { useState } from "react";
 import "./tasks.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { HiMiniPlusCircle } from "react-icons/hi2";
-import { FaRegCircle, FaPlus } from "react-icons/fa";
+import { FaRegCircle } from "react-icons/fa";
 import { CgDetailsMore } from "react-icons/cg";
 import { MdDateRange } from "react-icons/md";
 import { FaRepeat } from "react-icons/fa6";
 import { IoFlagOutline } from "react-icons/io5";
 
 function Tasks() {
-  const [allTasksComplete, setAllTasksComplete] = useState(true);
-  const [newTaskTitle, setNewTaskTitle] = useState("");
-  const [newTaskSubtasks, setNewTaskSubtasks] = useState("");
-  const [newTaskDetails, setNewTaskDetails] = useState("");
+  // STATES
+  // No tasks available or complete
+  // Task presently being added
+  // At least one task added but not complete
+  // Some tasks complete, some available
+  // All tasks complete, none available
+
+  const [taskAvailable, setTaskAvailable] = useState(false);
   const [isAddingTask, setIsAddingTask] = useState(false);
-  const [tasks, setTasks] = useState([]);
+  const [hasAddedTask, setHasAddedTask] = useState(false);
+  const [allTasksComplete, setAllTasksComplete] = useState(false);
 
-  const handleAddBlankTask = () => {
-    // const newTask = {
-    //   title: newTaskTitle,
-    //   subtasks: newTaskSubtasks,
-    //   details: newTaskDetails,
-    // };
-    setAllTasksComplete(false);
-    // setTasks([...tasks, newTask]);
-    // Reset input fields after adding task
-    setNewTaskTitle("");
-    setNewTaskSubtasks("");
-    setNewTaskDetails("");
-    setIsAddingTask(false);
-  };
+  const [newTaskTitle, setNewTaskTitle] = useState("");
+  const [newTaskDetails, setNewTaskDetails] = useState("");
+  const [newTaskDateAndTime, setNewTaskDateAndTime] = useState("");
+  const [newTaskPriority, setNewTaskPriority] = useState("");
 
-  const handleAddFilledTask = () => {
-    const newTask = {
-      title: newTaskTitle,
-      subtasks: newTaskSubtasks,
-      details: newTaskDetails,
-    };
+  const [taskTitles, setTaskTitles] = useState([]);
 
-    setTasks([...tasks, newTask]);
+  // const handleAddFilledTask = () => {
+  //   const newTask = {
+  //     title: newTaskTitle,
+  //     details: newTaskDetails,
+  //   };
 
-    if (newTask.trim() !== "") {
-      setTasks([...tasks, newTask]); // Add the new task to the tasks array
-      setNewTaskTitle(""); // Clear the input field
+  //   setTasks([...tasks, newTask]);
+
+  //   if (newTask.trim() !== "") {
+  //     setTaskTitles([...tasks, newTask]); // Add the new task to the tasks array
+  //     setNewTaskTitle(""); // Clear the input field
+  //   }
+
+  //   // Reset input fields after adding task
+  //   setNewTaskTitle("");
+  //   setNewTaskSubtasks("");
+  //   setNewTaskDetails("");
+  //   setIsAddingTask(false);
+  // };
+
+  const handleAddTask = () => {
+    if (newTaskTitle.trim() !== "") {
+      setTaskTitles([newTaskTitle, ...taskTitles]);
+      setHasAddedTask(true);
+      setIsAddingTask(false);
+      setTaskAvailable(true);
+      setNewTaskTitle("");
     }
   };
 
@@ -66,7 +78,6 @@ function Tasks() {
         <div
           className="tasks-component add-a-task-container"
           onClick={() => {
-            handleAddBlankTask();
             setIsAddingTask(true);
           }}
         >
@@ -80,7 +91,7 @@ function Tasks() {
         </div>
 
         <div className="tasks-component tasks-main">
-          {allTasksComplete && <p>No tasks to do!</p>}
+          {!taskAvailable && !isAddingTask && <p>No tasks to do!</p>}
 
           {isAddingTask && (
             <div className="task-item-container">
@@ -152,9 +163,23 @@ function Tasks() {
                   </div>
                 </div>
                 <div className="add-task-button-container">
-                  <button className="add-task-button">Add task</button>
+                  <button className="add-task-button" onClick={handleAddTask}>
+                    Add task
+                  </button>
                 </div>
               </div>
+            </div>
+          )}
+
+          {hasAddedTask && (
+            <div className="available-task-container">
+              <ul className="available-task-list">
+                {taskTitles.map((task, index) => (
+                  <li key={index} className="available-task-item">
+                    {task}
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
         </div>

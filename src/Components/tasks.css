@@ -4,10 +4,6 @@
   height: 100%;
 }
 
-.tasks-component {
-  /* border: 2px solid yellow; */
-}
-
 .tasks-header {
   flex: 1.5;
   display: flex;
@@ -53,7 +49,6 @@
 
 .add-a-task-text {
   flex: 8;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
 }
@@ -109,7 +104,6 @@
   border: none;
   padding: 5px;
   padding-left: 12.5px;
-  /* border: 2px solid yellow; */
 }
 
 .input-title {
@@ -150,6 +144,11 @@
 
 .add-task-button {
   height: 30px;
+}
+
+.available-task-container {
+  border: 2px solid red;
+  width: 100%;
 }
 
 .tasks-archive {
