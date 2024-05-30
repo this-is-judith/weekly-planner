@@ -59,30 +59,62 @@ function Tasks() {
           {allTasksComplete && <p>All Tasks Complete!</p>}
 
           {isAddingTask && (
-            <div className="task-item">
-              <div className="task-item-title"></div>
-              <div className="task-item-subtasks"></div>
-              <div className="task-item-details"></div>
-              <div className="task-item-datetime"></div>
-              <input
-                type="text"
-                value={newTaskTitle}
-                onChange={(e) => setNewTaskTitle(e.target.value)}
-                placeholder="Task title"
-              />
-              <input
-                type="text"
-                value={newTaskSubtasks}
-                onChange={(e) => setNewTaskSubtasks(e.target.value)}
-                placeholder="Subtasks"
-              />
-              <input
-                type="text"
-                value={newTaskDetails}
-                onChange={(e) => setNewTaskDetails(e.target.value)}
-                placeholder="Details"
-              />
-              <button onClick={handleAddTask}>Add Task</button>
+            <div className="task-item-container">
+              <div className="task-item task-item-title">
+                <div className="task-icon task-title-icon"></div>
+
+                <input
+                  className="task-input input-title"
+                  type="text"
+                  value={newTaskTitle}
+                  onChange={(e) => setNewTaskTitle(e.target.value)}
+                  placeholder="Title"
+                />
+
+                <div className="task-icon task-title-icon"></div>
+              </div>
+
+              <div className="task-item task-item-subtasks">
+                <div className="task-icon"></div>
+
+                <input
+                  className="task-input"
+                  type="text"
+                  value={newTaskSubtasks}
+                  onChange={(e) => setNewTaskSubtasks(e.target.value)}
+                  placeholder="Subtasks"
+                />
+
+                <div className="task-icon task-title-icon"></div>
+              </div>
+
+              <div className="task-item task-item-details">
+                <div className="task-icon"></div>
+
+                <input
+                  className="task-input"
+                  type="text"
+                  value={newTaskDetails}
+                  onChange={(e) => setNewTaskDetails(e.target.value)}
+                  placeholder="Details"
+                />
+
+                <div className="task-icon task-title-icon"></div>
+              </div>
+
+              <div className="task-item task-item-datetime">
+                <div className="task-icon"></div>
+
+                <input
+                  className="task-input"
+                  type="text"
+                  value={newTaskDetails}
+                  onChange={(e) => setNewTaskDetails(e.target.value)}
+                  placeholder="Date/Time"
+                />
+
+                <div className="task-icon task-title-icon"></div>
+              </div>
             </div>
           )}
         </div>
