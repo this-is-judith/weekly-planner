@@ -26,15 +26,66 @@ function Planner() {
     setIsCalendarVisible((prevState) => !prevState);
   };
 
+  const toggleTasksVisibility = () => {
+    setIsTasksVisible((prevState) => !prevState);
+  };
+
+  const toggleNotesVisibility = () => {
+    setIsNotesVisible((prevState) => !prevState);
+  };
+
   return (
     <>
-      {/* All three visible */}
-      {isCalendarVisible && isTasksVisible && isNotesVisible && (
-        <div className="page-container">
-          <div className="header-container">
-            <Header toggleCalendarVisibility={toggleCalendarVisibility} />
-          </div>
+      <div className="page-container">
+        <div className="header-container">
+          <Header
+            toggleCalendarVisibility={toggleCalendarVisibility}
+            toggleTasksVisibility={toggleTasksVisibility}
+            toggleNotesVisibility={toggleNotesVisibility}
+          />
+        </div>
 
+        {/* None visible */}
+        {!isCalendarVisible && !isTasksVisible && !isNotesVisible && (
+          <div className="home-container">Nothing is visible!</div>
+        )}
+
+        {/* Only Calendar visible */}
+
+        {/* Only Tasks visible */}
+
+        {/* Only Notes visible */}
+
+        {/* Calendar and Tasks visible, Notes hidden */}
+
+        {/* Calendar and Notes visible, Tasks hidden */}
+        {isCalendarVisible && !isTasksVisible && isNotesVisible && (
+          <div className="home-container">
+            <div className="main-container calendar-container">
+              <Calendar />
+            </div>
+
+            <div className="main-container notes-container">
+              <Notes />
+            </div>
+          </div>
+        )}
+
+        {/* Tasks and Notes visible, Calendar hidden */}
+        {!isCalendarVisible && isTasksVisible && isNotesVisible && (
+          <div className="home-container">
+            <div className="section-container main-container tasks-container">
+              <Tasks />
+            </div>
+
+            <div className="main-container notes-container">
+              <Notes />
+            </div>
+          </div>
+        )}
+
+        {/* All three visible */}
+        {isCalendarVisible && isTasksVisible && isNotesVisible && (
           <div className="home-container">
             <div className="section-container main-container tasks-container">
               <Tasks />
@@ -50,8 +101,8 @@ function Planner() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 }

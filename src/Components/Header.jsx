@@ -4,7 +4,11 @@ import { RiRhythmFill } from "react-icons/ri";
 import { FaLessThan, FaGreaterThan, FaMagnifyingGlass } from "react-icons/fa6";
 import { IoSettingsSharp } from "react-icons/io5";
 
-const Header = ({ toggleCalendarVisibility }) => {
+const Header = ({
+  toggleCalendarVisibility,
+  toggleTasksVisibility,
+  toggleNotesVisibility,
+}) => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const handleIconClick = () => {
@@ -15,6 +19,15 @@ const Header = ({ toggleCalendarVisibility }) => {
     if (option === "Hide Calendar") {
       toggleCalendarVisibility();
     }
+
+    if (option === "Hide Tasks") {
+      toggleTasksVisibility();
+    }
+
+    if (option === "Hide Notes") {
+      toggleNotesVisibility();
+    }
+
     setDropdownVisible(false);
   };
 
@@ -31,14 +44,14 @@ const Header = ({ toggleCalendarVisibility }) => {
             </div>
 
             <div
-              onClick={() => handleOptionClick("hide tasks")}
+              onClick={() => handleOptionClick("Hide Tasks")}
               className="dropdown-item"
             >
               Hide Tasks
             </div>
 
             <div
-              onClick={() => handleOptionClick("hide notes")}
+              onClick={() => handleOptionClick("Hide Notes")}
               className="dropdown-item"
             >
               Hide Notes
