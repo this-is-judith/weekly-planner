@@ -22,16 +22,16 @@ function Header() {
         {dropdownVisible && (
           <div className="dropdown-menu">
             <div
-              onClick={() => handleOptionClick("show tasks")}
+              onClick={() => handleOptionClick("hide tasks")}
               className="dropdown-item"
             >
-              Show Tasks
+              Hide Tasks
             </div>
             <div
-              onClick={() => handleOptionClick("show notes")}
+              onClick={() => handleOptionClick("hide notes")}
               className="dropdown-item"
             >
-              Show Notes
+              Hide Notes
             </div>
           </div>
         )}

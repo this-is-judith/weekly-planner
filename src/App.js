@@ -5,6 +5,16 @@ import Calendar from "./Components/Calendar";
 import Notes from "./Components/Notes";
 
 function App() {
+  // States for Tasks, Calendar and Notes visibility
+  // None visible
+  // Only Calendar visible
+  // Only Tasks visible
+  // Only Notes visible
+  // Calendar and Tasks visible, Notes hidden
+  // Calendar and Notes visible, Tasks hidden
+  // Tasks and Notes visible, Calendar hidden
+  // All three visible
+
   return (
     <>
       <div className="page-container">
