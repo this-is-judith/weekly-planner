@@ -13,7 +13,7 @@
   border: 2px solid blue;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
 }
 
 .header-name {
@@ -27,9 +27,33 @@
 }
 
 .header-calendar-month-year {
-  flex: 8;
+  flex: 10;
+}
+
+.header-calendar-month-year h2 {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.header-previous-week,
+.header-next-week {
+  display: flex;
+  align-items: center;
+}
+
+.header-previous-week {
+  justify-content: end;
+}
+
+.header-search,
+.header-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-user {
-  flex: 2;
+  flex: 4;
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import "./header.css";
 import { RiRhythmFill } from "react-icons/ri";
+import { FaLessThan, FaGreaterThan, FaMagnifyingGlass } from "react-icons/fa6";
+import { IoSettingsSharp } from "react-icons/io5";
 
 function Header() {
   return (
@@ -14,11 +16,27 @@ function Header() {
           <h1>Simple Rhythm</h1>
         </div>
 
-        <div className="header-component header-calendar-month-year"></div>
-        <div className="header-component header-change-week"></div>
-        <div className="header-component header-search"></div>
-        <div className="header-component header-settings"></div>
-        <div className="header-component header-user"></div>
+        <div className="header-component header-calendar-month-year">
+          <h2>May 2024</h2>
+        </div>
+
+        <div className="header-component header-previous-week">
+          <FaLessThan size="20" />
+        </div>
+
+        <div className="header-component header-next-week">
+          <FaGreaterThan size="20" />
+        </div>
+
+        <div className="header-component header-search">
+          <FaMagnifyingGlass size="25" />
+        </div>
+
+        <div className="header-component header-settings">
+          <IoSettingsSharp size="30" />
+        </div>
+
+        <div className="header-component header-user">User</div>
       </div>
     </>
   );
