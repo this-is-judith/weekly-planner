@@ -1,0 +1,18 @@
+.calendar-parent {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.calendar-component {
+  flex: 1;
+  border: 2px solid red;
+}
+
+.calendar-dates {
+  flex: 0.75;
+}
+
+.calendar-main {
+  flex: 8;
+}
