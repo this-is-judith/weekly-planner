@@ -51,12 +51,44 @@ function Planner() {
         )}
 
         {/* Only Calendar visible */}
+        {isCalendarVisible && !isTasksVisible && !isNotesVisible && (
+          <div className="home-container">
+            <div className="main-container calendar-container">
+              <Calendar />
+            </div>
+          </div>
+        )}
 
         {/* Only Tasks visible */}
+        {!isCalendarVisible && isTasksVisible && !isNotesVisible && (
+          <div className="home-container">
+            <div className="section-container main-container tasks-container">
+              <Tasks />
+            </div>
+          </div>
+        )}
 
         {/* Only Notes visible */}
+        {!isCalendarVisible && !isTasksVisible && isNotesVisible && (
+          <div className="home-container">
+            <div className="main-container notes-container">
+              <Notes />
+            </div>
+          </div>
+        )}
 
         {/* Calendar and Tasks visible, Notes hidden */}
+        {isCalendarVisible && isTasksVisible && !isNotesVisible && (
+          <div className="home-container">
+            <div className="section-container main-container tasks-container">
+              <Tasks />
+            </div>
+
+            <div className="main-container calendar-container">
+              <Calendar />
+            </div>
+          </div>
+        )}
 
         {/* Calendar and Notes visible, Tasks hidden */}
         {isCalendarVisible && !isTasksVisible && isNotesVisible && (
