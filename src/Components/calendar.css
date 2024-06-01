@@ -26,9 +26,10 @@
 
 .calendar-time-zone {
   flex: 1;
-  font-size: 13px;
+  font-size: 14px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .calendar-main {
@@ -45,3 +46,13 @@
 .time-partitions::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
 }
+
+.hour-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .hour-box {
+  height: 40px;
+} */

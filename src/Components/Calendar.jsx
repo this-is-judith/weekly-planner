@@ -48,9 +48,12 @@ function Calendar() {
 
           <div className="calendar-main time-partitions">
             {[...Array(24)].map((_, index) => (
-              <div key={index} className="hour-slot">
-                {index < 10 ? `0${index}:00` : `${index}:00`}
-              </div>
+              <>
+                <div key={index} className="hour-slot">
+                  {index < 10 ? `0${index}:00` : `${index}:00`}
+                </div>
+                <div className="hour-box"></div>
+              </>
             ))}
           </div>
         </div>
