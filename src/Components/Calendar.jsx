@@ -5,10 +5,47 @@ function Calendar() {
   return (
     <>
       <div className="calendar-parent">
-        <div className="calendar-component calendar-month-and-year"></div>
-        <div className="calendar-component calendar-days-of-week"></div>
-        <div className="calendar-component calendar-dates"></div>
-        <div className="calendar-component calendar-main"></div>
+        <div className="calendar-component calendar-sunday">
+          <div className="calendar-day"></div>
+          <div className="calendar-date"></div>
+          <div className="calendar-main"></div>
+        </div>
+
+        <div className="calendar-component calendar-monday">
+          <div className="calendar-day"></div>
+          <div className="calendar-date"></div>
+          <div className="calendar-main"></div>
+        </div>
+
+        <div className="calendar-component calendar-tuesday">
+          <div className="calendar-day"></div>
+          <div className="calendar-date"></div>
+          <div className="calendar-main"></div>
+        </div>
+
+        <div className="calendar-component calendar-wednesday">
+          <div className="calendar-day"></div>
+          <div className="calendar-date"></div>
+          <div className="calendar-main"></div>
+        </div>
+
+        <div className="calendar-component calendar-thursday">
+          <div className="calendar-day"></div>
+          <div className="calendar-date"></div>
+          <div className="calendar-main"></div>
+        </div>
+
+        <div className="calendar-component calendar-friday">
+          <div className="calendar-day"></div>
+          <div className="calendar-date"></div>
+          <div className="calendar-main"></div>
+        </div>
+
+        <div className="calendar-component calendar-saturday">
+          <div className="calendar-day"></div>
+          <div className="calendar-date"></div>
+          <div className="calendar-main"></div>
+        </div>
       </div>
     </>
   );

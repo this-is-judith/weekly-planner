@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./app.css";
+import "./planner.css";
 import Header from "./Components/Header";
 import Tasks from "./Components/Tasks";
 import Calendar from "./Components/Calendar";
