@@ -27,7 +27,7 @@
 }
 
 .calendar-and-notes-container {
-  flex: 2.5;
+  flex: 2.75;
   display: flex;
   flex-direction: column;
 }
